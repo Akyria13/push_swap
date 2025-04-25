@@ -7,17 +7,17 @@ NAME				:=		libft.a
 
 AR					:=		ar rcs
 CC					:=		cc
-CFLAGS				:=		-Wall -Wextra -Werror -MD -MP
+CFLAGS				:=		-Wall -Wextra -Werror -MD -MP -Iinc/
 
 OBJ_DIR				:=		obj_libft/
-DIR_LIBFT 			:= 		.
+DIR_LIBFT 			:= 		src/
 DIR_PRINTF			:= 		./ft_printf
 DIR_GNL				:=		./get_next_line
-INC_LIBFT 			:= 		$(DIR_LIBFT)/libft.h
-INC_PRINTF			:=		$(DIR_PRINTF)/ft_printf.h
-INC_GNL				:= 		$(DIR_GNL)/get_next_line.h
+INC_LIBFT 			:= 		./inc/libft.h
+INC_PRINTF			:=		./inc/ft_printf.h
+INC_GNL				:= 		./inc/get_next_line.h
 
-LIBFT_SRC			:=		$(addsuffix .c, \
+LIBFT_SRC			:=		$(addprefix src/, $(addsuffix .c, \
 							ft_bzero \
 							ft_calloc \
 							ft_isalnum \
@@ -59,7 +59,7 @@ LIBFT_SRC			:=		$(addsuffix .c, \
 							ft_lstdelone \
 							ft_lstclear \
 							ft_lstiter \
-							ft_lstmap)
+							ft_lstmap))
 PRINTF_SRC      	:= 		$(addsuffix .c, \
                 	 		ft_printf \
                 			ft_printint \
@@ -89,8 +89,8 @@ fclean : 					clean
 								@rm -f $(NAME)
 
 debug :
-								@echo "Current directory: $(PWD)"
-								@echo "Checking libft files:"
+								@echo "Current directory : $(PWD)"
+								@echo "Checking libft files : "
 								@ls -l $(DIR_LIBFT)
 
 re : 						fclean all
@@ -112,7 +112,7 @@ $(DIR_GNL)/%.o		:		$(DIR_GNL)/%.c $(INC_GNL)
 								@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR) 			:
-								mkdir -p $(OBJ_DIR)
+								mkdir -p $(OBJ_DIR)src/
 
 -include $(DEPS)
 

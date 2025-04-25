@@ -1,0 +1,1 @@
+obj_libft/src/ft_isalpha.o: src/ft_isalpha.c

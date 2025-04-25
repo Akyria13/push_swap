@@ -1,5 +1,5 @@
-ft_printf/ft_printint.o: ft_printf/ft_printint.c inc/ft_printf.h \
-  inc/libft.h /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
+obj_libft/src/ft_split.o: src/ft_split.c inc/libft.h \
+  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h /usr/include/features-time64.h \
@@ -49,10 +49,7 @@ ft_printf/ft_printint.o: ft_printf/ft_printint.c inc/ft_printf.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h
-
-inc/ft_printf.h:
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
 
 inc/libft.h:
 
@@ -165,5 +162,3 @@ inc/libft.h:
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h:

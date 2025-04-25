@@ -1,6 +1,5 @@
-ft_printf/ft_printptr.o: ft_printf/ft_printptr.c ft_printf/ft_printf.h \
-  ft_printf/../libft.h \
-  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
+ft_printf/ft_printptr.o: ft_printf/ft_printptr.c inc/ft_printf.h \
+  inc/libft.h /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h /usr/include/features-time64.h \
@@ -53,9 +52,9 @@ ft_printf/ft_printptr.o: ft_printf/ft_printptr.c ft_printf/ft_printf.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h
 
-ft_printf/ft_printf.h:
+inc/ft_printf.h:
 
-ft_printf/../libft.h:
+inc/libft.h:
 
 /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h:
 

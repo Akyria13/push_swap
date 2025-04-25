@@ -1,6 +1,6 @@
 get_next_line/get_next_line_utils.o: get_next_line/get_next_line_utils.c \
-  get_next_line/get_next_line.h /usr/include/fcntl.h \
-  /usr/include/features.h /usr/include/features-time64.h \
+  inc/get_next_line.h /usr/include/fcntl.h /usr/include/features.h \
+  /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
   /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -53,7 +53,7 @@ get_next_line/get_next_line_utils.o: get_next_line/get_next_line_utils.c \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
 
-get_next_line/get_next_line.h:
+inc/get_next_line.h:
 
 /usr/include/fcntl.h:
 

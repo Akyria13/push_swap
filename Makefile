@@ -10,6 +10,10 @@ CC				:= 		cc
 CFLAGS			:= 		-Wall -Wextra -Werror -MD -MP -Iinc/
 
 SRC				:=		src/main.c \
+						src/commands/push.c \
+						src/commands/swap.c \
+						src/commands/reverse_rotate.c \
+						src/commands/rotate.c \
 
 ########################################################################################################################
 #                                                      DIRECTORY                                                       #
@@ -46,9 +50,9 @@ clean :					.print_header
 							@printf "\n"
 
 fclean : 				clean
-							rm -f $(NAME)
-							$(MAKE) --silent -C $(LIBFT_DIR) fclean
 							@printf "%-50b%b" "$(YELLOW)[$(NAME)] :$(RESET)" "\n"
+							$(MAKE) --silent -C $(LIBFT_DIR) fclean
+							rm -f $(NAME)
 							@printf "%-50b%b" "=> $(BOLD_RED)Clean$(RESET)" $(call PROGRESS_BAR) "$(BOLD_GREEN)[✓]$(RESET)\n"
 							$(call SEPARATOR)
 
@@ -73,7 +77,7 @@ $(OBJ)				:	| $(DIRS)
 $(DIRS):
 							mkdir -p $@
 
-$(OBJ_DIR)%.o		:	 $(SRC_PATH)%.c $(INC_PATH)so_long.h
+$(OBJ_DIR)%.o		:	 $(SRC_PATH)%.c $(INC_PATH)push_swap.h
 							$(CC) $(CFLAGS) -c -o $@ $<
 
 -include $(DEP)

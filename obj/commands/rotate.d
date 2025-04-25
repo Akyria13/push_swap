@@ -1,5 +1,6 @@
-ft_printf/ft_printint.o: ft_printf/ft_printint.c inc/ft_printf.h \
-  inc/libft.h /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
+obj/commands/rotate.o: src/commands/rotate.c inc/push_swap.h \
+  inc/../libft/inc/ft_printf.h inc/../libft/inc/libft.h \
+  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h /usr/include/features-time64.h \
@@ -50,11 +51,21 @@ ft_printf/ft_printint.o: ft_printf/ft_printint.c inc/ft_printf.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h
+  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h \
+  /usr/lib/llvm-12/lib/clang/12.0.1/include/stdbool.h \
+  /usr/lib/llvm-12/lib/clang/12.0.1/include/limits.h \
+  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
 
-inc/ft_printf.h:
+inc/push_swap.h:
 
-inc/libft.h:
+inc/../libft/inc/ft_printf.h:
+
+inc/../libft/inc/libft.h:
 
 /usr/lib/llvm-12/lib/clang/12.0.1/include/stdint.h:
 
@@ -167,3 +178,21 @@ inc/libft.h:
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/lib/llvm-12/lib/clang/12.0.1/include/stdarg.h:
+
+/usr/lib/llvm-12/lib/clang/12.0.1/include/stdbool.h:
+
+/usr/lib/llvm-12/lib/clang/12.0.1/include/limits.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
