@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:01:47 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/25 22:25:51 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:28:59 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_stack *stack)
 	int	i;
 
 	i = stack->size - 1;
-	if (stack->stack_a == NULL && stack->stack_b == NULL )
+	if (stack == NULL)
 		return ;
 	while (i > 0)
 	{
@@ -40,7 +40,7 @@ void	pb(t_stack *stack)
 	int	i;
 
 	i = stack->size - 1;
-	if (stack->stack_a == NULL && stack->stack_b == NULL )
+	if (stack == NULL)
 		return ;
 	while (i > 0)
 	{

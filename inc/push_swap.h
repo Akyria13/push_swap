@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/25 22:12:18 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:07:14 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_stack
 	int					*stack_a;
 	int					*stack_b;
 	int					size;
-	// int					max_size;
 }							t_stack;
 
 // typedef	struct s_stack_node
@@ -48,9 +47,13 @@ typedef struct s_stack
 void					pa(t_stack *stack);
 void					pb(t_stack *stack);
 //- Commands -> Reverse rotate -//
-
+void					rra(t_stack *stack);
+void					rrb(t_stack *stack);
+void					rrr(t_stack *stack);
 //- Commands -> Rotate -//
-
+void					ra(t_stack *stack);
+void					rb(t_stack *stack);
+void					rr(t_stack *stack);
 //- Commands -> Swap -//
 void					sa(t_stack *stack);
 void					sb(t_stack *stack);

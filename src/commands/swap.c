@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:01:51 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/25 22:22:40 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:04:39 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	sa(t_stack *stack)
 {
 	int	tmp;
+
 	if (stack == NULL)
 		return ;
 	tmp = stack->stack_a[0];
@@ -26,6 +27,7 @@ void	sa(t_stack *stack)
 void	sb(t_stack *stack)
 {
 	int	tmp;
+
 	if (stack == NULL)
 		return ;
 	tmp = stack->stack_b[0];
@@ -37,6 +39,7 @@ void	sb(t_stack *stack)
 void	ss(t_stack *stack)
 {
 	int	tmp;
+
 	if (stack == NULL)
 		return ;
 	tmp = stack->stack_a[0];
