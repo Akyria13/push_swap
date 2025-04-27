@@ -7,7 +7,7 @@ NAME			:= 		push_swap
 
 AR				:= 		ar -rcs
 CC				:= 		cc
-CFLAGS			:= 		-Wall -Wextra -Werror -MD -MP -Iinc/
+CFLAGS			:= 		-Wall -Wextra -Werror -MD -MP -Iinc/ -g3
 
 SRC				:=		src/main.c \
 						src/commands/push.c \
@@ -15,8 +15,12 @@ SRC				:=		src/main.c \
 						src/commands/reverse_rotate.c \
 						src/commands/rotate.c \
 						src/parsing/is_contains_space.c \
+						src/parsing/is_number_exist.c \
 						src/parsing/is_valid_number.c \
-						src/parsing/parsing_init.c
+						src/parsing/push_swap_init.c \
+						src/parsing/valig_argument.c \
+						src/utils/free_stack.c \
+						src/utils/ft_atol.c
 
 ########################################################################################################################
 #                                                      DIRECTORY                                                       #

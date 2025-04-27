@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:24:32 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 15:58:34 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:52:52 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,37 @@ int	main(int argc, char **argv)
 {
 	t_stack *stack;
 	stack = ft_calloc(1, sizeof(t_stack));
-	parsing_init(argc, argv, stack);
 	if (stack == NULL)
-		return (0); //Error malloc function.
-	//stack->max_size = argc - 1;
+	{
+		ft_putstr_fd("Error.\nMemory allocation failed.\n", 2);
+		return (1);
+	}
+	ft_printf("Libération de stack_a à l'adresse %p\n", stack->stack_a);
+	stack->size = 0;
+	stack->stack_a = NULL;
+    stack->stack_b = NULL;
+	if (push_swap_init(argc, argv, stack) != 0)
+    {
+        free(stack);
+        return (1);
+    }
+	ft_printf("Après push_swap_init: stack_a à l'adresse %p\n", stack->stack_a);
+	//---
+    int i;
+	i = 0;
+	ft_printf("Contenu de la pile après parsing :\n");
+    while (i < stack->size)
+    {
+        ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
+        i++;
+    }
+	ft_printf("Avant free_stack: stack_a à l'adresse %p\n", stack->stack_a);
+    if (stack->stack_a)
+   		free(stack->stack_a);
+	if (stack->stack_b)
+    	free(stack->stack_b);
+	free(stack);
+    return (0);
 }
 
 // void	print_prog(t_stack *stack)

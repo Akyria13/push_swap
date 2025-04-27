@@ -6,13 +6,13 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:55:23 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 15:56:17 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:49:15 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atol(const char *str)
+long	ft_atol(char *str)
 {
 	int		i;
 	int		sign;

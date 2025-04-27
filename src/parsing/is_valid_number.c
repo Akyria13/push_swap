@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 14:52:39 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 16:03:15 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 18:17:55 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool	is_valid_number(char *str)
 		return (false);
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' && str[i] > '9')
+		if (str[i] < '0' || str[i] > '9')
 			return (false);
 		i++;
 	}

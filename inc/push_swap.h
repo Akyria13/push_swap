@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 15:56:45 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:45:25 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,15 @@ void					ss(t_stack *stack);
 
 //- Parsing -//
 bool					is_contains_space(char *str);
+bool					is_number_exist(int nb, int *tab, int size);
 bool					is_valid_number(char *str);
-int						parsing_init(int argc, char **argv, t_stack *stack);
+int						push_swap_init(int argc, char **argv, t_stack *stack);
+int						valid_argument(char *arg, int *stack, int index);
 //--- --- --- --- ---//
 
 //- Utils -//
-int						ft_atol(const char *str);
+void					free_stack(t_stack *stack);
+long					ft_atol(char *str);
 //--- --- --- --- ---//
 
 #endif
