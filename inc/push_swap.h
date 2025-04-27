@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/26 17:07:14 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 15:56:45 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,6 @@ typedef struct s_stack
 	int					*stack_b;
 	int					size;
 }							t_stack;
-
-// typedef	struct s_stack_node
-// {
-// 	int					value;
-// 	int					index;
-// 	int					push_cost;
-// 	bool				above_median;
-// 	bool				cheapest;
-// 	struct s_stack_node	*target;
-// 	struct s_stack_node	*next;
-// 	struct s_stack_node	*prev;
-// }						t_stack_node;
 
 //--- Utils functions ---//
 //- Initialization -//
@@ -61,7 +49,13 @@ void					ss(t_stack *stack);
 //--- --- --- --- ---//
 
 //- Parsing -//
+bool					is_contains_space(char *str);
+bool					is_valid_number(char *str);
+int						parsing_init(int argc, char **argv, t_stack *stack);
+//--- --- --- --- ---//
 
+//- Utils -//
+int						ft_atol(const char *str);
 //--- --- --- --- ---//
 
 #endif

@@ -14,6 +14,9 @@ SRC				:=		src/main.c \
 						src/commands/swap.c \
 						src/commands/reverse_rotate.c \
 						src/commands/rotate.c \
+						src/parsing/is_contains_space.c \
+						src/parsing/is_valid_number.c \
+						src/parsing/parsing_init.c
 
 ########################################################################################################################
 #                                                      DIRECTORY                                                       #
