@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:24:32 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 19:52:52 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:15:28 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,38 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack *stack;
+	t_stack	*stack;
+
+	if (argc <= 1)
+	{
+		ft_putstr_fd("Error.\nNo arguments provided.", 2);
+		return (1);
+	}
 	stack = ft_calloc(1, sizeof(t_stack));
 	if (stack == NULL)
 	{
 		ft_putstr_fd("Error.\nMemory allocation failed.\n", 2);
 		return (1);
 	}
-	ft_printf("Libération de stack_a à l'adresse %p\n", stack->stack_a);
 	stack->size = 0;
 	stack->stack_a = NULL;
-    stack->stack_b = NULL;
+	stack->stack_b = NULL;
 	if (push_swap_init(argc, argv, stack) != 0)
-    {
-        free(stack);
-        return (1);
-    }
-	ft_printf("Après push_swap_init: stack_a à l'adresse %p\n", stack->stack_a);
-	//---
-    int i;
+	{
+		ft_putstr_fd("\nError in push_swap init.\n", 2);
+		free(stack);
+		return (1);
+	}
+	int	i;
 	i = 0;
 	ft_printf("Contenu de la pile après parsing :\n");
-    while (i < stack->size)
-    {
-        ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
-        i++;
-    }
-	ft_printf("Avant free_stack: stack_a à l'adresse %p\n", stack->stack_a);
-    if (stack->stack_a)
-   		free(stack->stack_a);
-	if (stack->stack_b)
-    	free(stack->stack_b);
-	free(stack);
-    return (0);
+	while (i < stack->size)
+	{
+		ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
+		i++;
+	}
+	free_stack(stack);
+	return (0);
 }
 
 // void	print_prog(t_stack *stack)

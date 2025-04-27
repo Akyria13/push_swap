@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 19:45:25 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:19:42 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ typedef struct s_stack
 }							t_stack;
 
 //--- Utils functions ---//
-//- Initialization -//
-
-//--- --- --- --- ---//
 
 //- Commands -//
 //- Commands -> Push -//
@@ -48,12 +45,15 @@ void					sb(t_stack *stack);
 void					ss(t_stack *stack);
 //--- --- --- --- ---//
 
+//- Initialization -//
+int						push_swap_init(int argc, char **argv, t_stack *stack);
+//--- --- --- --- ---//
+
 //- Parsing -//
 bool					is_contains_space(char *str);
 bool					is_number_exist(int nb, int *tab, int size);
 bool					is_valid_number(char *str);
-int						push_swap_init(int argc, char **argv, t_stack *stack);
-int						valid_argument(char *arg, int *stack, int index);
+int						is_valid_argument(char *arg, int *stack, int index);
 //--- --- --- --- ---//
 
 //- Utils -//
