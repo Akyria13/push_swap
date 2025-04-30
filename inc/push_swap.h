@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 20:19:42 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/30 18:22:16 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void					ss(t_stack *stack);
 
 //- Initialization -//
 int						push_swap_init(int argc, char **argv, t_stack *stack);
+void					stack_indexing(t_stack *stack, int size);
 //--- --- --- --- ---//
 
 //- Parsing -//
@@ -57,6 +58,7 @@ int						is_valid_argument(char *arg, int *stack, int index);
 //--- --- --- --- ---//
 
 //- Utils -//
+void					free_exit(t_stack *stack, char *str, int ret);
 void					free_stack(t_stack *stack);
 long					ft_atol(char *str);
 //--- --- --- --- ---//

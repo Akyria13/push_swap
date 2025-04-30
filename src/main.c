@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:24:32 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/27 20:15:28 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/30 19:03:39 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,15 @@ int	main(int argc, char **argv)
 	t_stack	*stack;
 
 	if (argc <= 1)
-	{
-		ft_putstr_fd("Error.\nNo arguments provided.", 2);
-		return (1);
-	}
+		free_exit(NULL, "Error.\nNo arguments provided.", EXIT_FAILURE);
 	stack = ft_calloc(1, sizeof(t_stack));
 	if (stack == NULL)
-	{
-		ft_putstr_fd("Error.\nMemory allocation failed.\n", 2);
-		return (1);
-	}
+		free_exit(NULL, "Error.\nMemory allocation failed.", EXIT_FAILURE);
 	stack->size = 0;
 	stack->stack_a = NULL;
 	stack->stack_b = NULL;
 	if (push_swap_init(argc, argv, stack) != 0)
-	{
-		ft_putstr_fd("\nError in push_swap init.\n", 2);
-		free(stack);
-		return (1);
-	}
+		free_exit(stack, "\nError in push_swap init.\n", EXIT_FAILURE);
 	int	i;
 	i = 0;
 	ft_printf("Contenu de la pile après parsing :\n");

@@ -6,7 +6,7 @@
 /*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:01:47 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/26 16:28:59 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/04/30 15:20:23 by jowagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	pa(t_stack *stack)
 		stack->stack_b[i] = stack->stack_b[i + 1];
 		i++;
 	}
-	stack->stack_b[stack->size - 1] = 0;
+	stack->stack_b[stack->size - 1] = -1;
 	ft_printf("pa\n");
 }
 
@@ -54,6 +54,6 @@ void	pb(t_stack *stack)
 		stack->stack_a[i] = stack->stack_a[i + 1];
 		i++;
 	}
-	stack->stack_a[stack->size - 1] = 0;
+	stack->stack_a[stack->size - 1] = -1;
 	ft_printf("pb\n");
 }
