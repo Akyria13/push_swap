@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/30 18:22:16 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:00:33 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,14 @@ bool					is_valid_number(char *str);
 int						is_valid_argument(char *arg, int *stack, int index);
 //--- --- --- --- ---//
 
+//- Parsing -//
+void					choose_sorting(t_stack *stack);
+//int						radix_sort(t_stack *stack);
+bool					stack_is_sorted(t_stack *stack);
+//--- --- --- --- ---//
+
 //- Utils -//
 void					free_exit(t_stack *stack, char *str, int ret);
-void					free_stack(t_stack *stack);
 long					ft_atol(char *str);
 //--- --- --- --- ---//
 

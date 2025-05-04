@@ -3,14 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   stack_indexing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jowagner <jowagner@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:23:34 by jowagner          #+#    #+#             */
-/*   Updated: 2025/04/30 18:23:40 by jowagner         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:01:37 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	*copy_value(t_stack *stack, int size);
+static int	get_position(int values, int *value, int size);
+
+void	stack_indexing(t_stack *stack_a, int size)
+{
+	int *original_stack;
+	int	position;
+	int	i;
+
+	original_stack = copy_value(stack_a, size);
+	if (!original_stack)
+		return ;
+	i = 0;
+	while (i < size)
+	{
+		position = get_position(original_stack[i], original_stack, size);
+		stack_a->stack_a[i] = position;
+		i++;
+	}
+	free(original_stack);
+}
 
 static int	*copy_value(t_stack *stack, int size)
 {
@@ -43,23 +65,4 @@ static int	get_position(int values, int *value, int size)
 		j++;
 	}
 	return (position);
-}
-
-void	stack_indexing(t_stack *stack_a, int size)
-{
-	int *original_stack;
-	int	position;
-	int	i;
-
-	original_stack = copy_value(stack_a, size);
-	if (!original_stack)
-		return ;
-	i = 0;
-	while (i < size)
-	{
-		position = get_position(original_stack[i], original_stack, size);
-		stack_a->stack_a[i] = position;
-		i++;
-	}
-	free(original_stack);
 }

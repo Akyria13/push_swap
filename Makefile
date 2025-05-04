@@ -20,7 +20,9 @@ SRC				:=		src/main.c \
 						src/parsing/is_number_exist.c \
 						src/parsing/is_valid_number.c \
 						src/parsing/is_valid_argument.c \
-						src/utils/free_stack.c \
+						src/sorting/choose_sorting.c \
+						src/sorting/stack_is_sorted.c \
+						src/utils/free_exit.c \
 						src/utils/ft_atol.c
 
 ########################################################################################################################
