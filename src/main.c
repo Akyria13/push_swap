@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:24:32 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/04 15:36:05 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/05 20:24:45 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ int	main(int argc, char **argv)
 	stack = ft_calloc(1, sizeof(t_stack));
 	if (stack == NULL)
 		free_exit(NULL, "Error.\nMemory allocation failed.", EXIT_FAILURE);
-	stack->size = 0;
-	stack->stack_a = NULL;
-	stack->stack_b = NULL;
 	if (push_swap_init(argc, argv, stack) != 0)
-		free_exit(stack, "\nError in push_swap init.\n", EXIT_FAILURE);
-	ft_printf("Contenu de la pile après parsing :\n");
+		free_exit(stack, "Error.\nPpush_swap init failed.\n", EXIT_FAILURE);
+	//choose_sorting(stack);
 	//--- Test
+	ft_printf("Contenu de la pile après parsing :\n");
 	int	i;
 	i = 0;
 	while (i < stack->size)

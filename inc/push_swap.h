@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/04 17:00:33 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/05 23:16:30 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_stack
 	int					*stack_a;
 	int					*stack_b;
 	int					size;
-}							t_stack;
+}						t_stack;
 
 //--- Utils functions ---//
 
@@ -38,10 +38,14 @@ void					rrr(t_stack *stack);
 //- Commands -> Rotate -//
 void					ra(t_stack *stack);
 void					rb(t_stack *stack);
+void					ra_silent(t_stack *stack);
+void					rb_silent(t_stack *stack);
 void					rr(t_stack *stack);
 //- Commands -> Swap -//
 void					sa(t_stack *stack);
 void					sb(t_stack *stack);
+void					sa_silent(t_stack *stack);
+void					sb_silent(t_stack *stack);
 void					ss(t_stack *stack);
 //--- --- --- --- ---//
 
@@ -51,15 +55,17 @@ void					stack_indexing(t_stack *stack, int size);
 //--- --- --- --- ---//
 
 //- Parsing -//
-bool					is_contains_space(char *str);
+bool					is_contains_spaces(char *str);
 bool					is_number_exist(int nb, int *tab, int size);
 bool					is_valid_number(char *str);
-int						is_valid_argument(char *arg, int *stack, int index);
+int						is_valid_argument(char *arg, int *stack, int index, int *result);
 //--- --- --- --- ---//
 
 //- Parsing -//
 void					choose_sorting(t_stack *stack);
-//int						radix_sort(t_stack *stack);
+void					radix_sort(t_stack *stack);
+void					sort_four_stack(t_stack *stack);
+void					sort_three_stack(t_stack *stack);
 bool					stack_is_sorted(t_stack *stack);
 //--- --- --- --- ---//
 

@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:01:47 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/04 13:52:29 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/05 23:06:29 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	pa(t_stack *stack)
 {
 	int	i;
 
-	i = stack->size - 1;
-	if (stack == NULL)
+	if (stack == NULL || stack->stack_b[0] == -1)
 		return ;
+	i = stack->size - 1;
 	while (i > 0)
 	{
 		stack->stack_a[i] = stack->stack_a[i - 1];
@@ -26,7 +26,7 @@ void	pa(t_stack *stack)
 	}
 	stack->stack_a[0] = stack->stack_b[0];
 	i = 0;
-	while (i < stack->size - 1)
+	while (i < stack->size - 1 && stack->stack_b[i] != -1)
 	{
 		stack->stack_b[i] = stack->stack_b[i + 1];
 		i++;
@@ -39,9 +39,9 @@ void	pb(t_stack *stack)
 {
 	int	i;
 
-	i = stack->size - 1;
-	if (stack == NULL)
+	if (stack == NULL || stack->size <= 1)
 		return ;
+	i = stack->size - 1;
 	while (i > 0)
 	{
 		stack->stack_b[i] = stack->stack_b[i - 1];

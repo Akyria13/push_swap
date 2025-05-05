@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 18:47:55 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/04 15:20:18 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/05 21:28:28 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,34 @@
 static bool	check_format(char *arg);
 static bool	check_size(char *arg);
 
-int	is_valid_argument(char *arg, int *stack, int index)
+int	is_valid_argument(char *arg, int *stack, int index, int *result)
 {
 	long	num;
 
 	if (!check_format(arg) || !check_size(arg))
 	{
-		return (0);
+		return (false);
 	}
 	num = ft_atol(arg);
 	if (num > INT_MAX || num < INT_MIN)
 	{
 		ft_putstr_fd("Error.\nNumber outside the bounds of an integer.", 2);
-		return (0);
+		return (false);
 	}
 	if (is_number_exist((int)num, stack, index))
 	{
 		ft_putstr_fd("Error.\nOne or few numbers already exist.", 2);
-		return (0);
+		return (false);
 	}
-	return ((int)num);
+	*result = (int)num;
+	return (true);
 }
 
 static bool	check_format(char *arg)
 {
-	if (is_contains_space(arg))
+	if (is_contains_spaces(arg))
 	{
-		ft_putstr_fd("Error.\nYour string contains space.", 2);
+		ft_putstr_fd("Error.\nYour string contains spaces.", 2);
 		return (false);
 	}
 	if (!is_valid_number(arg))
