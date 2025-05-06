@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 15:26:40 by jolanwagner       #+#    #+#             */
-/*   Updated: 2025/05/05 23:16:40 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:04:57 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	choose_sorting(t_stack *stack)
 		sort_three_stack(stack);
 	else if (stack->size == 4)
 		sort_four_stack(stack);
+	else if (stack->size == 5)
+		sort_five_stack(stack);
 	else
 		radix_sort(stack);
 }

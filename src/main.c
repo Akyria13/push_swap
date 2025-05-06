@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:24:32 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/05 20:24:45 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:14:03 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 		ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
 		i++;
 	}
+	ft_printf("__________________________\n");
 	//--- End Test
 	free_exit(stack, NULL, EXIT_SUCCESS);
 	return (0);

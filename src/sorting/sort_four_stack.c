@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 14:50:21 by jolanwagner       #+#    #+#             */
-/*   Updated: 2025/05/05 23:16:45 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:04:18 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	find_min_index(t_stack *stack)
 
 	min_index = 0;
 	i = 1;
-	while (i < stack->size)
+	while (i < stack->size && stack->stack_a[i] != -1)
 	{
 		if (stack->stack_a[i] < stack->stack_a[min_index])
 			min_index = i;

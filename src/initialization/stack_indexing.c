@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:23:34 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/05 20:07:19 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:18:48 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	get_position(int values, int *value, int size);
 
 void	stack_indexing(t_stack *stack_a, int size)
 {
-	int *original_stack;
+	int	*original_stack;
 	int	position;
 	int	i;
 
@@ -54,7 +54,7 @@ static int	*copy_value(t_stack *stack, int size)
 static int	get_position(int values, int *value, int size)
 {
 	int	position;
-	int j;
+	int	j;
 
 	position = 0;
 	j = 0;

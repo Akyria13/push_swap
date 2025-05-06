@@ -21,13 +21,13 @@ SRC				:=		src/main.c \
 						src/parsing/is_valid_number.c \
 						src/parsing/is_valid_argument.c \
 						src/sorting/choose_sorting.c \
+						src/sorting/sort_five_stack.c \
 						src/sorting/sort_four_stack.c \
 						src/sorting/sort_three_stack.c \
 						src/sorting/radix_sort.c \
 						src/sorting/stack_is_sorted.c \
 						src/utils/free_exit.c \
 						src/utils/ft_atol.c
-#						src/sorting/sort_five_stack.c
 
 ########################################################################################################################
 #                                                      DIRECTORY                                                       #

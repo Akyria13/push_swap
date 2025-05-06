@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 14:49:58 by jolanwagner       #+#    #+#             */
-/*   Updated: 2025/05/05 23:16:25 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:23:21 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,27 @@
 
 void	sort_three_stack(t_stack *stack)
 {
-	if (stack->stack_a[0] == 1 && stack->stack_a[1] == 0
-		&& stack->stack_a[2] == 2)
+	int	a;
+	int	b;
+	int	c;
+
+	a = stack->stack_a[0];
+	b = stack->stack_a[1];
+	c = stack->stack_a[2];
+	if (a > b && b < c && a < c)
 		sa(stack);
-	else if (stack->stack_a[0] == 0 && stack->stack_a[1] == 2
-		&& stack->stack_a[2] == 1)
-		{
-			sa(stack);
-			ra(stack);
-		}
-	else if (stack->stack_a[0] == 2 && stack->stack_a[1] == 1
-		&& stack->stack_a[2] == 0)
-		{
-			sa(stack);
-			rra(stack);
-		}
-	else if (stack->stack_a[0] == 2 && stack->stack_a[1] == 0
-		&& stack->stack_a[2] == 1)
-			ra(stack);
-	else if (stack->stack_a[0] == 1 && stack->stack_a[1] == 2
-		&& stack->stack_a[2] == 0)
-			rra(stack);
+	else if (a > b && b > c)
+	{
+		sa(stack);
+		rra(stack);
+	}
+	else if (a > b && b < c && a > c)
+		ra(stack);
+	else if (a < b && b > c && a < c)
+	{
+		sa(stack);
+		ra(stack);
+	}
+	else if (a < b && b > c && a > c)
+		rra(stack);
 }
