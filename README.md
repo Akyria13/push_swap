@@ -62,8 +62,51 @@ make
 ./push_swap (your sequence of number)
 ```
 
+You can use this main.c to see your stack A content like the screen show.
+
+![image](https://github.com/user-attachments/assets/415dadff-75a1-4683-ae60-d63a4bfcc7fe)
+
+```c
+int	main(int argc, char **argv)
+{
+	t_stack	*stack;
+
+	if (argc <= 1)
+		free_exit(NULL, "Error.\nNo arguments provided.", EXIT_FAILURE);
+	stack = ft_calloc(1, sizeof(t_stack));
+	if (stack == NULL)
+		free_exit(NULL, "Error.\nMemory allocation failed.", EXIT_FAILURE);
+	push_swap_init(argc, argv, stack);
+	stack_indexing(stack, stack->size);
+	// choose_sorting(stack);
+	//-- Visual test
+	ft_printf("Stack contents after parsing and before sorting :\n");
+	int    i;
+	i = 0;
+	while (i < stack->size)
+	{
+		ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
+		i++;
+	}
+	choose_sorting(stack);
+	i = 0;
+	ft_printf("\nStack contents after sorting :\n");
+	while (i < stack->size)
+	{
+		ft_printf("[%d] : %d\n", i, stack->stack_a[i]);
+		i++;
+	}
+	ft_printf("__________________________\n");
+	//--End test
+	free_exit(stack, NULL, EXIT_SUCCESS);
+	return (0);
+}
+```
+
 ---
 
 ## 📝 Resources
 
-- **`1`** : https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
+- **`1`** Understanding Radix sort : https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
+- **`2`** Testing your push_swap : https://github.com/SimonCROS/push_swap_tester
+- **`3`** Visualizing your push_swap : https://github.com/o-reo/push_swap_visualizer
