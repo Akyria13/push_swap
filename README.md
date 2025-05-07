@@ -60,6 +60,7 @@ The output should be the sequence of instructions that will sort the numbers usi
 ```bash
 make
 ./push_swap (your sequence of number)
+```
 
 ---
 
