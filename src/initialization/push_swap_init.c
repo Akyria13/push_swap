@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:29:13 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/06 02:20:53 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/06 02:54:18 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ int	push_swap_init(int argc, char **argv, t_stack *stack)
 		stack->stack_a[i - 1] = value;
 		i++;
 	}
-	stack_indexing(stack, stack->size);
 	return (0);
 }

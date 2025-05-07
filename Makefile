@@ -48,7 +48,7 @@ override DIRS	:=		$(sort $(dir $(NAME) $(OBJ) $(DEP)))
 #                                                      TARGETS                                                         #
 ########################################################################################################################
 
-all : 					lib $(NAME)
+all : 					.print_header lib $(NAME)
 
 lib :
 							$(MAKE) -C $(LIBFT_DIR)

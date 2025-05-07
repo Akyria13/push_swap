@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:00:55 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/04 16:58:41 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/07 16:26:12 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ static void	free_stack(t_stack *stack);
 
 void	free_exit(t_stack *stack, char *str, int ret)
 {
-	if (!stack)
-		return ;
 	if (stack)
 		free_stack(stack);
 	if (str != NULL)
