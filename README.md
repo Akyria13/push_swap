@@ -107,6 +107,5 @@ int	main(int argc, char **argv)
 
 ## 📝 Resources
 
-- **`1`** Understanding Radix sort : https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
-- **`2`** Testing your push_swap : https://github.com/SimonCROS/push_swap_tester
-- **`3`** Visualizing your push_swap : https://github.com/o-reo/push_swap_visualizer
+- **`1`** Testing your push_swap : https://github.com/SimonCROS/push_swap_tester
+- **`2`** Visualizing your push_swap : https://github.com/o-reo/push_swap_visualizer
