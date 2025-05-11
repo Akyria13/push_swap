@@ -78,7 +78,6 @@ int	main(int argc, char **argv)
 		free_exit(NULL, "Error.\nMemory allocation failed.", EXIT_FAILURE);
 	push_swap_init(argc, argv, stack);
 	stack_indexing(stack, stack->size);
-	// choose_sorting(stack);
 	//-- Visual test
 	ft_printf("Stack contents after parsing and before sorting :\n");
 	int    i;
@@ -97,7 +96,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	ft_printf("__________________________\n");
-	//--End test
+	//-- End test
 	free_exit(stack, NULL, EXIT_SUCCESS);
 	return (0);
 }
