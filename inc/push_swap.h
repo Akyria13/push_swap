@@ -6,7 +6,7 @@
 /*   By: jolanwagner13 <jolanwagner13@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:58:04 by jowagner          #+#    #+#             */
-/*   Updated: 2025/05/06 02:24:29 by jolanwagner      ###   ########.fr       */
+/*   Updated: 2025/05/12 11:31:16 by jolanwagner      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int						is_valid_argument(char *arg,
 							int *stack, int index, int *result);
 //--- --- --- --- ---//
 
-//- Parsing -//
+//- Sorting -//
 void					choose_sorting(t_stack *stack);
 void					radix_sort(t_stack *stack);
 void					sort_five_stack(t_stack *stack);
