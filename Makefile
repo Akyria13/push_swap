@@ -7,7 +7,7 @@ NAME			:= 		push_swap
 
 AR				:= 		ar -rcs
 CC				:= 		cc
-CFLAGS			:= 		-Wall -Wextra -Werror -MD -MP -Iinc/ -g3
+CFLAGS			:= 		-Wall -Wextra -Werror -MD -MP -Iinc/
 
 SRC				:=		src/main.c \
 						src/commands/push.c \
@@ -54,7 +54,7 @@ lib :
 							$(MAKE) -C $(LIBFT_DIR)
 
 clean :					.print_header
-							@printf "%-50b%b" "$(YELLOW)[so_long/$(OBJ_DIR)] :$(RESET)" "\n"
+							@printf "%-50b%b" "$(YELLOW)[push_swap/$(OBJ_DIR)] :$(RESET)" "\n"
 							rm -rf $(OBJ_DIR)
 							@printf "%-50b%b" "=> $(BOLD_RED)Clean$(RESET)" $(call PROGRESS_BAR) "$(BOLD_GREEN)[✓]$(RESET)\n"
 							@printf "\n"
