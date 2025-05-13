@@ -151,4 +151,4 @@ endef
 #                                                       PHONY TARGETS                                                  #
 ########################################################################################################################
 
-.PHONY : 				all lib clean fclean re
+.PHONY : 				all lib clean fclean re .print_header
